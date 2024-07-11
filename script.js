@@ -252,6 +252,7 @@ async function generateQRCode(text, errorCorrectionLevel, version, mode) {
     displayQrcode(qrCodeGenerate)
 
   } catch (err) {
+    alert('Error generating QR Code, check your console for more details.');
     console.error('Error generating QR Code:', err);
   }
 }
