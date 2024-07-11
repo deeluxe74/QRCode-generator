@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.scss">
+    <title>QR Code Generator</title>
+</head>
+
+<body>
+    <script type="module" src="script.js"></script>
+    <h1>QR Code Generator</h1>
+    
+    <div class="container">
+        <div class="container__preview">
+           <div class="container__preview__frame">
+                <img id="qrcode-img" alt="Start generate !" />
+           </div>
+    
+            <br>
+            <button class="preview__download" id="download">Download</button>
+        </div>
+
+        <div class="container__requirement">
+            <h2>Enter your requirement</h2>
+
+            <form class="container__requirement__form" id="form">
+                <div class="container__requirement__form__item">
+                    <label for="inputString">Qrcode Text</label>
+                    <input type="text" name="inputString" id="inputString">
+                    <div id="inputSize"></div>
+                </div>
+                
+                <div class="container__requirement__form__item">
+                    <label for="mode">Mode</label>
+                    <select name="mode" id="mode">
+                        <option value="auto" selected>Auto</option>
+                        <option value="alphanumeric">Alphanumeric (A-Z uppercase only)</option>
+                        <option value="numeric">Numeric (1, 2, 3...)</option>
+                        <option value="byte">Byte (?a1A)</option>
+                    </select>
+                </div>
+
+                <div class="container__requirement__form__item">
+                    <label for="errorResistance">Error resistance</label>
+                    <select name="errorResistance" id="errorResistance">
+                        <option value="L">L (~7%)</option>
+                        <option value="M">M (~15%)</option>
+                        <option value="Q" selected>Q (~25%)</option>
+                        <option value="H">H (~30%)</option>
+                    </select>
+                </div>
+
+                <div class="container__requirement__form__item">
+                    <label for="version">Version (number of block)</label>
+                    <select id="version" name="version">
+                        <option value="1" selected>1 (21x21)</option>
+                        <option value="2">2 (25x25)</option>
+                        <option value="3">3 (29x29)</option>
+                        <option value="4">4 (33x33)</option>
+                        <option value="5">5 (37x37)</option>
+                        <option value="6">6 (41x41)</option>
+                        <option value="7">7 (45x45)</option>
+                        <option value="8">8 (49x49)</option>
+                        <option value="9">9 (53x53)</option>
+                        <option value="10">10 (57x57)</option>
+                        <option value="11">11 (61x61)</option>
+                        <option value="12">12 (65x65)</option>
+                        <option value="13">13 (69x69)</option>
+                        <option value="14">14 (73x73)</option>
+                        <option value="15">15 (77x77)</option>
+                        <option value="16">16 (81x81)</option>
+                        <option value="17">17 (85x85)</option>
+                        <option value="18">18 (89x89)</option>
+                        <option value="19">19 (93x93)</option>
+                        <option value="20">20 (97x97)</option>
+                        <option value="21">21 (101x101)</option>
+                        <option value="22">22 (105x105)</option>
+                        <option value="23">23 (109x109)</option>
+                        <option value="24">24 (113x113)</option>
+                        <option value="25">25 (117x117)</option>
+                        <option value="26">26 (121x121)</option>
+                        <option value="27">27 (125x125)</option>
+                        <option value="28">28 (129x129)</option>
+                        <option value="29">29 (133x133)</option>
+                        <option value="30">30 (137x137)</option>
+                        <option value="31">31 (141x141)</option>
+                        <option value="32">32 (145x145)</option>
+                        <option value="33">33 (149x149)</option>
+                        <option value="34">34 (153x153)</option>
+                        <option value="35">35 (157x157)</option>
+                        <option value="36">36 (161x161)</option>
+                        <option value="37">37 (165x165)</option>
+                        <option value="38">38 (169x169)</option>
+                        <option value="39">39 (173x173)</option>
+                        <option value="40">40 (177x177)</option>
+                    </select>
+                </div>
+
+                <button type="submit">Generate</button>
+            </form>
+        </div>
+    </div>
+</body>               
